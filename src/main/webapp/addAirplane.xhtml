@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="personform">
+			<h:panelGrid columns="2">
+
+				<h:outputText value="#{msg.airplaneFirstNameLabel}" />
+				<h:inputText id="nazwa" value="#{airplaneBean.airplane.name}" />
+
+				<h:outputText value="#{msg.airplaneOwnerLabel}" />
+				<h:inputText id="wlasciciel" value="#{airplaneBean.airplane.owner}" />
+
+				<h:outputText value="#{msg.airplanePilotsLabel}" />
+				<h:inputText id="liczba_pilotow" value="#{airplaneBean.airplane.pilots}" />
+				
+				<h:outputText value="#{msg.airplaneCapacityLabel}" />
+				<h:inputText id="pojemnosc" value="#{airplaneBean.airplane.capacity}" />
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.personFormOKButton}"
+				action="#{airplaneBean.addPerson}" />
+				
+			<h:panelGrid>
+				<h:messages showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -8,13 +8,14 @@ body {
 
 .heading {
   padding: 10px;
-  background: #00FFFF;
+  background: #FFFFC1;
   border: 1px solid blue;
   font-size: 2.3em;
   font-style: italic;
   font-family: Verdana;
   text-align: center;
   height: 50px;
+  font-color: #005C00;
 }
 
 .menuAndContent {
@@ -30,8 +31,8 @@ body {
   position: absolute;
   left: 10px;
   height: 80%;
-  width: 200px;
-  background: #CCFFFF;
+  width: 230px;
+  background: #FFFFC1;
   top: 90px;
 }
 
@@ -40,9 +41,9 @@ body {
   padding-left: 20px;
   padding-bottom: 20px;
   border: thin solid blue;
-  background: #FFFFFF;	
+  background: #FFFFC1;	
   position:absolute;
-  left: 225px; 
+  left: 250px; 
   right: 65px;
   top: 90px;
   height: 80%;

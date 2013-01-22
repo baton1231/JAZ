@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="personform">
+			<h:panelGrid columns="2">
+
+				<h:outputText value="#{msg.flightArrTimeLabel}" />
+				<h:inputText id="godz_przylotu" value="#{flightBean.flight.arrivalTime}" />
+
+				<h:outputText value="#{msg.flightDepTimeLabel}" />
+				<h:inputText id="godz_odlotu" value="#{flightBean.flight.departureTime}" />
+
+				<h:outputText value="#{msg.flightIdAirplaneLabel}" />
+				<h:inputText id="id_samolotu" value="#{flightBean.flight.id_airplane}" />
+				
+				<h:outputText value="#{msg.flightIDPassengerLabel}" />
+				<h:inputText id="id_pasazera" value="#{flightBean.flight.id_passenger}" />
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.personFormOKButton}"
+				action="#{flightBean.addPerson}" />
+				
+			<h:panelGrid>
+				<h:messages showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

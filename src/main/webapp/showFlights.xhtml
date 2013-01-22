@@ -9,27 +9,27 @@
 	
     <h:form>
     
-     <h:dataTable value="#{wizytaBean.allVisits}" var="item">
-          <f:facet name="header">#{msg.visitsAllLabel}</f:facet>
+     <h:dataTable value="#{flightBean.allFlights}" var="item">
+          <f:facet name="header">#{msg.flightsAllLabel}</f:facet>
       
       <h:column>
-        <f:facet name="header">#{msg.visitGodzLabel}</f:facet>
-        #{item.godzina}
+        <f:facet name="header">#{msg.flightArrTimeLabel}</f:facet>
+        #{item.arrivalTime}
       </h:column>
       
       <h:column>
-        <f:facet name="header">#{msg.visitDataLabel}</f:facet>
-        #{item.data_zabiegu}
+        <f:facet name="header">#{msg.flightDepTimeLabel}</f:facet>
+        #{item.departureTime}
       </h:column>
 
       <h:column>
-        <f:facet name="header">#{msg.visitIdDoctorLabel}</f:facet>
-        #{item.id_lekarza}
+        <f:facet name="header">#{msg.flightIdAirplaneLabel}</f:facet>
+        #{item.id_airplane}
       </h:column>
    
        <h:column>
-        <f:facet name="header">#{msg.visitIDPatientLabel}</f:facet>
-        #{item.id_pacjenta}
+        <f:facet name="header">#{msg.flightIDPassengerLabel}</f:facet>
+        #{item.id_passenger}
       </h:column> 
       
       <h:column>

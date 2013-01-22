@@ -9,22 +9,22 @@
 	
     <h:form>
     
-     <h:dataTable value="#{lekarzBean.allDoctors}" var="item">
-      <f:facet name="header">#{msg.doctorsAllLabel}</f:facet>
+     <h:dataTable value="#{passengerBean.allPassengers}" var="item">
+      <f:facet name="header">#{msg.passengersAllLabel}</f:facet>
       
       <h:column>
-        <f:facet name="header">#{msg.doctorFirstNameLabel}</f:facet>
-        #{item.imie}
+        <f:facet name="header">#{msg.passengerFirstNameLabel}</f:facet>
+        #{item.name}
       </h:column>
       
       <h:column>
-        <f:facet name="header">#{msg.doctorSurnameLabel}</f:facet>
-        #{item.nazwisko}
+        <f:facet name="header">#{msg.passengerSurnameLabel}</f:facet>
+        #{item.surname}
       </h:column>
  
        <h:column>
-        <f:facet name="header">#{msg.doctorSpecLabel}</f:facet>
-        #{item.specjalizacja}
+        <f:facet name="header">#{msg.passengerDestinationLabel}</f:facet>
+        #{item.destination}
       </h:column>
       
       <h:column>
